@@ -3,16 +3,39 @@
 #########
 # first of all making link to .vimrc file
 current=$(cd $(dirname $0) && pwd)
-ln -s $current/_vimrc ~/.vimrc
+
+# doing check if .vimrc already exists
+if [ -e ~/.vimrc ]; then
+	echo "WARNING: .vimrc already available"
+else
+	echo "Linking .vimrc to $current/_vimrc"
+	ln -s $current/_vimrc ~/.vimrc
+fi
+
 #
 ########
 
+# creating link to the bundle
+bundle_path=~/.vim/bundle
+if [ -e $bundle_path ]; then
+	echo "WARNING: Pathogen bundle already in place"
+else
+	echo "Making link for pathogen bundle"
+	ln -s $current $bundle_path
+fi
+
 #########
 # installing pathogen
-mkdir -p ~/.vim/autoload
-curl 'www.vim.org/scripts/download_script.php?src_id=16224' > ~/.vim/autoload/pathogen.vim
-# creating link to the bundle
-ln -s $current ~/.vim/bundle
+pathegen_path=~/.vim/autoload/pathogen.vim
+# check if pathogen.vim is already availbale
+if [ -e $pathegen_path ]; then
+	echo "Pathogen is installed"
+else
+	echo "Installing pathegon into $pathegen_path"
+	mkdir -p ~/.vim/autoload
+	curl 'www.vim.org/scripts/download_script.php?src_id=16224' > $pathegen_path
+fi
+
 #
 #########
 
@@ -40,5 +63,15 @@ svn co http://web-indent.googlecode.com/svn/trunk vim-indent-readonly
 # and ofcourse solarized color scheme
 git clone git://github.com/altercation/vim-colors-solarized.git vim-solarized
 
+# xml plugin for easier editing xml
+git clone https://github.com/sukima/xmledit.git vim-xmledit
+
+# nerd tree
+git clone https://github.com/scrooloose/nerdtree.git vim-nerdtree
+
+# markdown
+git clone https://github.com/hallison/vim-markdown vim-markdown
+
 #
 ##########
+
