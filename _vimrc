@@ -191,44 +191,11 @@ function! SaveSession()
 endfunction
 command! SW :call SaveSession()
 
-""""""""""""""""""""""""""""""
-" => Vim grep
-""""""""""""""""""""""""""""""
-let Grep_Skip_Dirs = 'RCS CVS SCCS .svn generated'
-set grepprg=/bin/grep\ -nH
-
-syntax enable "Enable syntax hl
-
 set ruler "Always show current position
-
-""""""""""""""""""""""""""""""
-" => JavaScript section
-"""""""""""""""""""""""""""""""
-
-" preserv space when doing Align=|:
-autocmd FileType javascript AlignCtrl W
-
-
-""""""""""""""""""""""""""""""""""
-" => Html
-"""""""""""""""""""""""""""""""""""
-autocmd FileType html set expandtab
-autocmd FileType html set textwidth=79
-autocmd FileType html set tabstop=4
-autocmd FileType html set softtabstop=2 " makes the spaces feel like real tabs
-autocmd FileType html set shiftwidth=2
-autocmd FileType html set autoindent
-
-""""""""""""""""""""""""""""""""""
-" => MarkDown
-"""""""""""""""""""""""""""""""""""
-
-autocmd FileType mkd set textwidth=0
 
 """"""""""""""""""""""""""""""""""
 " experiments
 """"""""""""""""""""""""""""""""""
-
 " highlight lines longer than 73 chars with ErrorMsg group color
 " match ErrorMsg /\%>73v.\+/
 
