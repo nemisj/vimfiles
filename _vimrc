@@ -236,7 +236,7 @@ autocmd FileType mkd set textwidth=0
 " highlight MyGroup ctermbg=red guibg=red gctermfg=yellow guifg=yellow term=bold
 
 " searching for a template file for new files
-autocmd BufNewFile * silent! 0r ~/.vim/templates/%:e.tpl
+" autocmd BufNewFile * silent! 0r ~/.vim/templates/%:e.tpl
 
 " Changing to current dir of the file, so that :e gives us correct path
 set autochdir
