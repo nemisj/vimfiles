@@ -10,4 +10,5 @@ setlocal shiftwidth=4
 " Uncomment lines by using cx
 vmap <buffer> cc :s/^/\/\//<Esc><Esc>
 vmap <buffer> cx :s/\/\/// <Esc><Esc>
-
+nmap <buffer> cc V:s/^/\/\//<Esc><Esc>
+nmap <buffer> cx V:s/\/\/// <Esc><Esc>
