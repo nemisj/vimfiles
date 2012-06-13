@@ -113,13 +113,6 @@ set incsearch
 " highlight search
 set hlsearch
 
-" Comment lines by using cc
-" Uncomment lines by using cx
-map cc v:s/^/\/\//g<CR><CR>
-map cx v:s/^\/\///g<CR><CR>
-vmap cc :s/^/\/\//g<CR>
-vmap cx :s/^\/\///g<CR>
-
 function! PrepareXML( )
   " Deleting lines
   exec 'g/^\s*$/d' 
@@ -183,7 +176,7 @@ function! RestoreSession()
 		execute 'source ~/.vim/Session.vim'
 	end
 endfunction
-autocmd VimEnter * call RestoreSession()
+" autocmd VimEnter * call RestoreSession()
 
 function! SaveSession()
 	exec ':mksession! ~/vim/Session.vim'

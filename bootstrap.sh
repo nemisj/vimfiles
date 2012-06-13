@@ -4,7 +4,7 @@
 # first of all making link to .vimrc file
 current=$(cd $(dirname $0) && pwd)
 
-# doing check if .vimrc already exists
+
 if [ -e ~/.vimrc ]; then
 	echo "WARNING: .vimrc already available"
 else
@@ -51,7 +51,7 @@ git clone https://github.com/msanders/snipmate.vim vim-snipmate.vim
 # vsc command support within the vim
 git clone git://repo.or.cz/vcscommand vim-vcscommand
 
-#coffee script support in vim
+# coffee script support in vim
 git clone https://github.com/kchmck/vim-coffee-script.git vim-coffee-script
 
 # extending js snippets
