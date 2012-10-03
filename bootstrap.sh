@@ -72,6 +72,9 @@ git clone https://github.com/scrooloose/nerdtree.git vim-nerdtree
 # markdown
 git clone https://github.com/hallison/vim-markdown vim-markdown
 
+# syntatics for syntaxchecking all the code
+git clone https://github.com/scrooloose/syntastic.git vim-syntatics
+
 #
 ##########
 
