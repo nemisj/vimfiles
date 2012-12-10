@@ -75,6 +75,9 @@ git clone https://github.com/hallison/vim-markdown vim-markdown
 # syntatics for syntaxchecking all the code
 git clone https://github.com/scrooloose/syntastic.git vim-syntatics
 
+# better align
+git clone https://github.com/tsaleh/vim-align.git vim-align
+
 #
 ##########
 

@@ -26,6 +26,8 @@
     Tree explorer for navigating filesystem
   - [Markdown](http://www.vim.org/scripts/script.php?script_id=2882)
     Support for markdown
+  - [Align](http://www.vim.org/scripts/script.php?script_id=294)
+    Help folks to align text, eqns, declarations, tables, etc 
 
 ## Installation
 
