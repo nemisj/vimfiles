@@ -72,11 +72,15 @@ git clone https://github.com/scrooloose/nerdtree.git vim-nerdtree
 # markdown
 git clone https://github.com/hallison/vim-markdown vim-markdown
 
-# syntatics for syntaxchecking all the code
-git clone https://github.com/scrooloose/syntastic.git vim-syntatics
+# syntastic for syntaxchecking all the code
+git clone https://github.com/scrooloose/syntastic.git vim-syntastic
+
 
 # better align
 git clone https://github.com/tsaleh/vim-align.git vim-align
+
+# molokai color
+git clone https://github.com/tomasr/molokai.git vim-molokai
 
 #
 ##########

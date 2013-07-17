@@ -18,13 +18,16 @@ if has("gui_running")
   colorscheme evening
   " set guifont=Monaco:h12
 else
+  let g:molokai_original = 1
+  let g:rehash256 = 1
+  colorscheme molokai
+  set background=dark
   " colorscheme cli_scheme
   " colorscheme koehler
-  " set background=light
-  set background=dark
+  " set background=dark
   " let g:solarized_termcolors=16
   " colorscheme zenburn
-  colorscheme solarized
+  " colorscheme molokai
   set t_Co=256 " enable 256 colors support in vim
   " set t_Co=16
 endif
@@ -96,6 +99,7 @@ set statusline+=%-3.3n\                      " buffer number
 set statusline+=%f\                          " filename
 set statusline+=%h%m%r%w                     " status flags
 set statusline+=\[%{strlen(&ft)?&ft:'none'}] " file type
+set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%=                           " right align remainder
 set statusline+=0x%-8B                       " character value
 set statusline+=%-14(%l,%c%V%)               " line, character
@@ -207,3 +211,5 @@ set autochdir
 " making diff colors looks better
 " highlight DiffDelete ctermfg=black ctermbg=yellow
 " highlight DiffAdd ctermfg=black ctermbg=white
+
+
