@@ -48,7 +48,8 @@ This plugin will help you to get 'gf' working in VIM when doing stuff for node.j
 It will scan all the folders up to the root for node_modules and will add them to the 'path' variable of the VIM.
 After that you could do gf on the require statements like:
 
-var express = require('express');
+    var express = require('express');
+
 and it will open the source folder of the express from the place which would node use :)
 So, long living 'gf'. 
 
