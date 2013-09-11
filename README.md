@@ -42,7 +42,8 @@ That's it. Now your vim ready to go.
 
 ## Included in local config
 
-after/ftplugin/javascript.vim
+### Node.js and 'gf' combination
+__after/ftplugin/javascript.vim__
 
 This plugin will help you to get 'gf' working in VIM when doing stuff for node.js. 
 It will scan all the folders up to the root for node_modules and will add them to the 'path' variable of the VIM.
