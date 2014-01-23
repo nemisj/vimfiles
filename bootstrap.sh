@@ -79,8 +79,11 @@ git clone https://github.com/scrooloose/syntastic.git vim-syntastic
 # better align
 git clone https://github.com/tsaleh/vim-align.git vim-align
 
-# molokai color
-git clone https://github.com/tomasr/molokai.git vim-molokai
+# airline
+git clone https://github.com/bling/vim-airline vim-airline
+
+# ctrl-p
+git clone https://github.com/kien/ctrlp.vim.git vim-ctrlp
 
 #
 ##########

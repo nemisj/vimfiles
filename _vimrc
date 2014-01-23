@@ -20,14 +20,16 @@ if has("gui_running")
 else
   let g:molokai_original = 1
   let g:rehash256 = 1
+  " colorscheme solarized
+  
   colorscheme molokai
   set background=dark
+
   " colorscheme cli_scheme
   " colorscheme koehler
   " set background=dark
   " let g:solarized_termcolors=16
   " colorscheme zenburn
-  " colorscheme molokai
   set t_Co=256 " enable 256 colors support in vim
   " set t_Co=16
 endif
@@ -94,16 +96,6 @@ set textwidth=79
 
 " Statusbar and Linenumbers
 set laststatus=2
-set statusline=
-set statusline+=%-3.3n\                      " buffer number
-set statusline+=%f\                          " filename
-set statusline+=%h%m%r%w                     " status flags
-set statusline+=\[%{strlen(&ft)?&ft:'none'}] " file type
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%=                           " right align remainder
-set statusline+=0x%-8B                       " character value
-set statusline+=%-14(%l,%c%V%)               " line, character
-"set statusline+=%<%P                         " file position
 
 " bells suck
 set noerrorbells
