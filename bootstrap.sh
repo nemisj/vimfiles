@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
-#########
-# first of all making link to .vimrc file
 current=$(cd $(dirname $0) && pwd)
 
-
+#########
+# first of all making link to .vimrc file
 if [ -e ~/.vimrc ]; then
 	echo "WARNING: .vimrc already available"
 else
@@ -75,7 +74,6 @@ git clone https://github.com/hallison/vim-markdown vim-markdown
 # syntastic for syntaxchecking all the code
 git clone https://github.com/scrooloose/syntastic.git vim-syntastic
 
-
 # better align
 git clone https://github.com/tsaleh/vim-align.git vim-align
 
@@ -84,6 +82,9 @@ git clone https://github.com/bling/vim-airline vim-airline
 
 # ctrl-p
 git clone https://github.com/kien/ctrlp.vim.git vim-ctrlp
+
+# molokai color-cheme
+git clone https://github.com/tomasr/molokai.git vim-molokai
 
 #
 ##########

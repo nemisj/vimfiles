@@ -28,6 +28,9 @@
     Support for markdown
   - [Align](http://www.vim.org/scripts/script.php?script_id=294)
     Help folks to align text, eqns, declarations, tables, etc 
+* Color scheme
+  - [molokai](https://github.com/tomasr/molokai)
+    Molokai Color Scheme for Vim
 
 ## Installation
 
