@@ -3,7 +3,7 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-source _include
+source ~/sources/man2code/vimfiles/_include
 
 
 """"""""""""""""""""""""""""
