@@ -2,6 +2,27 @@
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+Bundle 'sjl/gundo.vim'
+Bundle 'msanders/snipmate.vim'
+Bundle 'mxw/vim-jsx'
+" Bundle '" git clone git://repo.or.cz/vcscommand vim-vcscommand
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'nemisj/vim-snipmate'
+Bundle 'pangloss/vim-javascript'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'sukima/xmledit'
+Bundle 'scrooloose/nerdtree'
+Bundle 'hallison/vim-markdown'
+Bundle 'scrooloose/syntastic'
+Bundle 'bling/vim-airline'
+Bundle 'kien/ctrlp.vim'
+Bundle 'tomasr/molokai'
+
+filetype on
 
 """"""""""""""""""""""""""""""""""
 " Pathogen injection
@@ -62,8 +83,8 @@ set wildmode=list:longest,full
 
 " show tabs, end of lines,etc
 " irritates eyes 
-" set list
-" set listchars=tab:▸\ ,eol:¬
+set list
+set listchars=tab:▸\ ,eol:¬
 
 " normal movement, through screen lines instead of file lines
 nnoremap j gj
@@ -204,4 +225,4 @@ set autochdir
 " highlight DiffDelete ctermfg=black ctermbg=yellow
 " highlight DiffAdd ctermfg=black ctermbg=white
 
-
+let g:syntastic_javascript_checkers = ['eslint']
