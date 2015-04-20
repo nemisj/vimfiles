@@ -2,32 +2,9 @@
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
-Bundle 'sjl/gundo.vim'
-Bundle 'msanders/snipmate.vim'
-Bundle 'mxw/vim-jsx'
-" Bundle '" git clone git://repo.or.cz/vcscommand vim-vcscommand
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'nemisj/vim-snipmate'
-Bundle 'pangloss/vim-javascript'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'sukima/xmledit'
-Bundle 'scrooloose/nerdtree'
-Bundle 'hallison/vim-markdown'
-Bundle 'scrooloose/syntastic'
-Bundle 'bling/vim-airline'
-Bundle 'kien/ctrlp.vim'
-Bundle 'tomasr/molokai'
 
-filetype on
+source _include
 
-""""""""""""""""""""""""""""""""""
-" Pathogen injection
-""""""""""""""""""""""""""""""""
-call pathogen#infect() 
 
 """"""""""""""""""""""""""""
 " Enable Syntax Colors
