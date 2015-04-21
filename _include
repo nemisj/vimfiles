@@ -6,7 +6,8 @@ Bundle 'gmarik/vundle'
 Bundle 'sjl/gundo.vim'
 Bundle 'msanders/snipmate.vim'
 Bundle 'mxw/vim-jsx'
-" Bundle '" git clone git://repo.or.cz/vcscommand vim-vcscommand
+Bundle 'airblade/vim-gitgutter'
+Bundle 'vcscommand.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'nemisj/vim-snipmate'
 Bundle 'pangloss/vim-javascript'
@@ -18,6 +19,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'bling/vim-airline'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tomasr/molokai'
+Bundle 'mileszs/ack.vim'
 Bundle 'local-config', {'pinned': 1}
 
 filetype on
