@@ -4,6 +4,7 @@ import sys
 import vim
 
 vim.command(r"set suffixesadd+=.js")
+vim.command(r"set suffixesadd+=.jsx")
 
 #
 # walk up and check every folder for node_modules folder, 
