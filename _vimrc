@@ -3,7 +3,7 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-source ~/sources/man2code/vimfiles/_include
+source ~/.vim/_include
 
 
 """"""""""""""""""""""""""""
@@ -46,8 +46,6 @@ autocmd WinLeave * setlocal nocursorline
 set tabstop=4
 set smarttab
 set shiftwidth=4
-" Informaat is not using spaces instead of tabs
-set noexpandtab
 
 " adding visual cues to folds
 set foldcolumn=1
@@ -86,7 +84,7 @@ filetype plugin on
 set wrap
 
 " wrap lines longer 80 chars
-set textwidth=79
+"set textwidth=79
  
 " show if line longer than 89 chars
 " Onnly for vim 7.3

@@ -1,6 +1,6 @@
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'sjl/gundo.vim'
@@ -8,6 +8,7 @@ Bundle 'msanders/snipmate.vim'
 Bundle 'mxw/vim-jsx'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'vcscommand.vim'
+Bundle 'Align.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'nemisj/vim-snipmate'
 Bundle 'pangloss/vim-javascript'
