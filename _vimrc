@@ -16,20 +16,18 @@ if has("gui_running")
   colorscheme evening
   " set guifont=Monaco:h12
 else
+  set t_Co=256 " enable 256 colors support in vim
+
   let g:molokai_original = 1
   let g:rehash256 = 1
-  " colorscheme solarized
-  
-  colorscheme molokai
   set background=dark
+  colorscheme molokai
 
-  " colorscheme cli_scheme
-  " colorscheme koehler
-  " set background=dark
-  " let g:solarized_termcolors=16
-  " colorscheme zenburn
-  set t_Co=256 " enable 256 colors support in vim
-  " set t_Co=16
+
+  " presentation mode
+  " set background=light
+  " colorscheme leya
+
 endif
 
 
