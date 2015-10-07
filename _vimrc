@@ -30,6 +30,9 @@ else
 
 endif
 
+" stop webpack from ignoring changed files
+set backupcopy=yes
+
 
 """"""""""""""""""""""""""""
 " Setting cursor line highlighting
