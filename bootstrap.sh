@@ -16,11 +16,19 @@ if [ ! -e ~/.vimrc ]; then
 fi
 
 cd ${bundle_path}
-git clone https://github.com/gmarik/Vundle.vim.git
+if [ ! -e Vundle.vim ]; then
+	echo "Going to install Vundle"
+	git clone https://github.com/VundleVim/Vundle.vim.git
+fi
 
 # create link to the _include
 cd ~/.vim
+rm -rf _include
 ln -s ${current_dir}/_include _include
 
 # install plugins
 vim +PluginInstall +qall
+
+# add local config
+rm -rf ${bundle_path}/local-config
+ln -s ${current_dir}/local-config ${bundle_path}/local-config

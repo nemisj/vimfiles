@@ -201,7 +201,13 @@ set autochdir
 " highlight DiffDelete ctermfg=black ctermbg=yellow
 " highlight DiffAdd ctermfg=black ctermbg=white
 
-let g:syntastic_javascript_checkers = ['eslint']
+" let g:syntastic_javascript_checkers = ['eslint', 'jscs']
+let g:syntastic_javascript_checkers = ['jscs']
+autocmd BufNewFile,BufReadPre *.js let b:syntastic_javascript_jscs_args =
+    \ '--config ' . findfile('.jscsrc', escape(expand('%:p:h'), ' ') . ';')
+
+autocmd BufNewFile,BufReadPre *.jsx let b:syntastic_javascript_jscs_args =
+    \ '--config ' . findfile('.jscsrc', escape(expand('%:p:h'), ' ') . ';')
 
 let g:ctrlp_map = '<c-p>'
 " let g:ctrlp_match_window_bottom = 0

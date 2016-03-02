@@ -1,26 +1,39 @@
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#rc()
-Bundle 'gmarik/vundle'
-Bundle 'sjl/gundo.vim'
-Bundle 'msanders/snipmate.vim'
-Bundle 'mxw/vim-jsx'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'vcscommand.vim'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'nemisj/vim-snipmate'
-Bundle 'pangloss/vim-javascript'
-Bundle 'sukima/xmledit'
-Bundle 'scrooloose/nerdtree'
-Bundle 'hallison/vim-markdown'
-Bundle 'scrooloose/syntastic'
-Bundle 'bling/vim-airline'
-Bundle 'kien/ctrlp.vim'
-Bundle 'tomasr/molokai'
-Bundle 'mileszs/ack.vim'
-Bundle 'marlun/vim-starwars'
-Bundle 'groenewege/vim-less'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" utils
+Plugin 'sjl/gundo.vim'
+Plugin 'msanders/snipmate.vim'
+Plugin 'nemisj/vim-snipmate'
+Plugin 'bling/vim-airline'
+Plugin 'kien/ctrlp.vim'
+Plugin 'mileszs/ack.vim'
+
+" vcs integration
+Plugin 'git://repo.or.cz/vcscommand.git'
+Plugin 'airblade/vim-gitgutter'
+
+" syntax
+Plugin 'pangloss/vim-javascript'
+Plugin 'sukima/xmledit'
+Plugin 'hallison/vim-markdown'
+Plugin 'scrooloose/syntastic'
+Plugin 'groenewege/vim-less'
+Plugin 'mxw/vim-jsx'
+
+" color schemes
+Plugin 'marlun/vim-starwars'
+Plugin 'tomasr/molokai'
+
+" local stuff
 Bundle 'local-config', {'pinned': 1}
+
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 filetype on
