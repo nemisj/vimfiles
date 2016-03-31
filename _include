@@ -13,6 +13,7 @@ Plugin 'nemisj/vim-snipmate'
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
+Plugin 'tpope/vim-surround'
 
 " vcs integration
 Plugin 'git://repo.or.cz/vcscommand.git'
