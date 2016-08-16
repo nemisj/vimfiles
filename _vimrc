@@ -119,18 +119,7 @@ endfunction
 command! PrepareXML :call PrepareXML() 
 
 function! PrepareJSON( )
-  " Deleting lines
-  exec 'g/^\s*$/d' 
-  " Joing lines
-  exec '0,$j'
-  " Spliting all nodes
-  exec "%s/{/{\r/g"
-  exec "%s/{/\r{/g"
-  exec "%s/}/\r}/g"
-  exec '%s/},"/},\r"/g'
-  exec '%s/,"/,\r"/g'
-  exec 'set ft=javascript'
-  exec 'BenIndent'
+  exec '%!python -m json.tool'
 endfunction
 command! PrepareJSON :call PrepareJSON() 
 
