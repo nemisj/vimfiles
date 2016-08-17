@@ -16,7 +16,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'tpope/vim-surround'
 
 " vcs integration
-Plugin 'git://repo.or.cz/vcscommand.git'
+Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 
 " syntax
