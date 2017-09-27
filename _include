@@ -31,6 +31,9 @@ Plugin 'mxw/vim-jsx'
 Plugin 'marlun/vim-starwars'
 Plugin 'tomasr/molokai'
 
+" tests runner for mocha, jasmin, etc
+Plugin 'janko-m/vim-test'
+
 " local stuff
 Bundle 'local-config', {'pinned': 1}
 
