@@ -78,9 +78,8 @@ map <C-W>e :NERDTreeToggle .<cr>
 " not satisfied with how file type based indentation works.
 set autoindent
 
-filetype on
-filetype indent on
-filetype plugin on
+filetype off
+filetype plugin indent on
 
 set wrap
 
