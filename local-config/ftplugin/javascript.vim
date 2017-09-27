@@ -7,16 +7,19 @@ setlocal expandtab
 " preserv space when doing Align=|:
 " autocmd FileType javascript AlignCtrl W
 
+" let b:current_place = '.'
+let b:current_place = escape(expand('%:p:h'), ' ')
+
 " configure different lints
-let b:eslint_rc = findfile('.eslintrc', escape(expand('%:p:h'), ' ') . ';')
+let b:eslint_rc = findfile('.eslintrc', b:current_place . ';')
 
 if b:eslint_rc != ''
   let b:syntastic_checkers = ['eslint']
-  let b:syntastic_javascript_eslint_args = '--config ' . b:eslint_rc
-  let b:eslint_bin = findfile('node_modules/.bin/eslint', escape(expand('%:p:h'), ' ') . ';')
+  let b:syntastic_javascript_eslint_args = '--config ' . fnamemodify(b:eslint_rc, ':p')
+  let b:eslint_bin = findfile('node_modules/.bin/eslint', b:current_place . ';')
 
   if b:eslint_bin != ''
-    let b:syntastic_javascript_eslint_exec = b:eslint_bin
+    let b:syntastic_javascript_eslint_exec = fnamemodify(b:eslint_bin, ':p')
   endif
 endif
 
@@ -26,3 +29,9 @@ vmap <buffer> cc :s/^/\/\//<Esc><Esc>
 vmap <buffer> cx :s/\/\/// <Esc><Esc>
 nmap <buffer> cc V:s/^/\/\//<Esc><Esc>
 nmap <buffer> cx V:s/\/\/// <Esc><Esc>
+
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>
