@@ -1,4 +1,4 @@
-python << EOF
+python3 << EOF
 import os
 import sys
 import vim
