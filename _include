@@ -14,6 +14,7 @@ Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-commentary'
 
 " vcs integration
 Plugin 'tpope/vim-fugitive'

@@ -24,13 +24,6 @@ if b:eslint_rc != ''
   endif
 endif
 
-" Comment lines by using cc
-" Uncomment lines by using cx
-vmap <buffer> cc :s/^/\/\//<Esc><Esc>
-vmap <buffer> cx :s/\/\/// <Esc><Esc>
-nmap <buffer> cc V:s/^/\/\//<Esc><Esc>
-nmap <buffer> cx V:s/\/\/// <Esc><Esc>
-
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
