@@ -13,6 +13,17 @@ fi
 if [ ! -e ~/.vimrc ]; then
 	echo "Will link .vimrc to $(pwd)/_vimrc"
 	ln -s ${current_dir}/_vimrc ~/.vimrc
+else
+	# find out if this is our link
+	target=$(readlink -f ~/.vimrc)
+	if [ "$target" != "${current_dir}/_vimrc" ]; then
+		echo "You have own .vimrc. Continue? (y/n)"
+		read answer
+		if [ $answer != "y" ]; then
+			echo "Got '${answer}'. Ok. Quit"
+			exit 1
+		fi
+	fi
 fi
 
 cd ${bundle_path}
