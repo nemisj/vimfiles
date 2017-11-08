@@ -15,6 +15,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
+Plugin 'editorconfig/editorconfig-vim'
 
 " vcs integration
 Plugin 'tpope/vim-fugitive'
