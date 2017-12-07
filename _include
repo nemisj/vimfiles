@@ -21,13 +21,14 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 
-" syntax
+" syntax/indent
 Plugin 'pangloss/vim-javascript'
 Plugin 'sukima/xmledit'
 Plugin 'hallison/vim-markdown'
 Plugin 'scrooloose/syntastic'
 Plugin 'groenewege/vim-less'
 Plugin 'mxw/vim-jsx'
+Plugin 'groovyindent-unix'
 
 " color schemes
 Plugin 'marlun/vim-starwars'
