@@ -199,4 +199,11 @@ let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_dotfiles = 0
 let g:ctrlp_switch_buffer = 0
 
-
+"
+" Setting up vim-test
+"
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>
