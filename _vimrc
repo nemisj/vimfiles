@@ -25,7 +25,6 @@ else
 
 
   " presentation mode
-  " set background=light
   " colorscheme leya
 
 endif
@@ -190,6 +189,7 @@ set autochdir
 " highlight DiffAdd ctermfg=black ctermbg=white
 
 let g:syntastic_auto_loc_list = 1
+let g:syntastic_ignore_files = ['\m/node_modules/']
 
 let g:ctrlp_map = '<c-p>'
 " let g:ctrlp_match_window_bottom = 0
