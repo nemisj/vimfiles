@@ -29,3 +29,10 @@ if b:eslint_rc != ''
   endif
 endif
 
+let b:jshint_rc = findfile('.jshintrc', b:current_place . ';')
+if b:jshint_rc != ''
+  let b:syntastic_checkers = ['jshint']
+endif
+
+
+let g:test#javascript#intern#file_pattern = '\vtest_.*\.jsx?$'
