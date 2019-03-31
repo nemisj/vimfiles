@@ -29,6 +29,8 @@ Plugin 'scrooloose/syntastic'
 Plugin 'groenewege/vim-less'
 Plugin 'mxw/vim-jsx'
 Plugin 'groovyindent-unix'
+Plugin 'Vimjas/vim-python-pep8-indent'
+Plugin 'HerringtonDarkholme/yats'
 
 " color schemes
 Plugin 'marlun/vim-starwars'
