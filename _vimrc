@@ -2,6 +2,8 @@
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
+scriptencoding utf-8
+set encoding=utf-8
 
 source ~/.vim/_include
 
