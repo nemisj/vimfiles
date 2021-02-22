@@ -83,6 +83,9 @@ filetype off
 filetype plugin indent on
 
 set wrap
+set nowrapscan
+nnoremap n nzz
+nnoremap N Nzz
 
 " wrap lines longer 80 chars
 "set textwidth=79

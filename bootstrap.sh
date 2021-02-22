@@ -1,12 +1,15 @@
 #!/usr/bin/env bash
 
+echo "Preparing vim environment"
+
 current=$(cd $(dirname $0) && pwd)
 
 # creating link to the bundle
-bundle_path=~/.vim/bundle
+bundle_path=~/.vim/plugged
 current_dir=$(cd $(dirname $0) && pwd)
 
 if [ ! -d ${bundle_path} ]; then
+	echo "Creating plugged folder"
 	mkdir -p ${bundle_path}
 fi
 
@@ -27,19 +30,18 @@ else
 fi
 
 cd ${bundle_path}
-if [ ! -e Vundle.vim ]; then
-	echo "Going to install Vundle"
-	git clone https://github.com/VundleVim/Vundle.vim.git
-fi
 
 # create link to the _include
+echo "Creating link to _include file"
 cd ~/.vim
 rm -rf _include
 ln -s ${current_dir}/_include _include
 
 # install plugins
-vim +PluginInstall +qall
+echo "Installing plugins using vim-plug"
+vim +PlugInstall +qall
 
 # add local config
+echo "Updateing local-config"
 rm -rf ${bundle_path}/local-config
 ln -s ${current_dir}/local-config ${bundle_path}/local-config

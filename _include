@@ -1,48 +1,43 @@
-filetype off
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" Specify a directory for plugins
+" - For Neovim: stdpath('data') . '/plugged'
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" utils
-Plugin 'sjl/gundo.vim'
-Plugin 'msanders/snipmate.vim'
-Plugin 'nemisj/vim-snipmate'
-Plugin 'bling/vim-airline'
-Plugin 'kien/ctrlp.vim'
-Plugin 'mileszs/ack.vim'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-commentary'
-Plugin 'editorconfig/editorconfig-vim'
+Plug 'dense-analysis/ale'
+Plug 'sjl/gundo.vim'
+Plug 'msanders/snipmate.vim'
+Plug 'nemisj/vim-snipmate'
+Plug 'bling/vim-airline'
+Plug 'kien/ctrlp.vim'
+Plug 'mileszs/ack.vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'editorconfig/editorconfig-vim'
 
 " vcs integration
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 " syntax/indent
-Plugin 'pangloss/vim-javascript'
-Plugin 'sukima/xmledit'
-Plugin 'hallison/vim-markdown'
-Plugin 'scrooloose/syntastic'
-Plugin 'groenewege/vim-less'
-Plugin 'mxw/vim-jsx'
-Plugin 'groovyindent-unix'
-Plugin 'Vimjas/vim-python-pep8-indent'
-Plugin 'HerringtonDarkholme/yats'
+Plug 'sheerun/vim-polyglot'
 
 " color schemes
-Plugin 'marlun/vim-starwars'
-Plugin 'tomasr/molokai'
+Plug 'marlun/vim-starwars'
+Plug 'tomasr/molokai'
 
 " tests runner for mocha, jasmin, etc
-Plugin 'janko-m/vim-test'
+Plug 'janko-m/vim-test'
 
 " local stuff
-Bundle 'local-config', {'pinned': 1}
+" Bundle 'local-config', {'pinned': 1}
 
-call vundle#end()            " required
-filetype plugin indent on    " required
-
-filetype on
+" Initialize plugin system
+call plug#end()
