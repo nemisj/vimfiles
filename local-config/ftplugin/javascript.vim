@@ -8,31 +8,4 @@ let g:jsx_ext_required = 0
 " preserv space when doing Align=|:
 " autocmd FileType javascript AlignCtrl W
 
-" let b:current_place = '.'
-let b:current_place = escape(expand('%:p:h'), ' ')
-
-" configure different lints
-let b:eslint_rc = findfile('.eslintrc', b:current_place . ';')
-
-if b:eslint_rc == ''
-  let b:eslint_rc = findfile('eslintrc.yml', b:current_place . ';')
-endif
-
-
-if b:eslint_rc != ''
-  let b:syntastic_checkers = ['eslint']
-  let b:syntastic_javascript_eslint_args = '--config ' . fnamemodify(b:eslint_rc, ':p')
-  let b:eslint_bin = findfile('node_modules/.bin/eslint', b:current_place . ';')
-
-  if b:eslint_bin != ''
-    let b:syntastic_javascript_eslint_exec = fnamemodify(b:eslint_bin, ':p')
-  endif
-endif
-
-let b:jshint_rc = findfile('.jshintrc', b:current_place . ';')
-if b:jshint_rc != ''
-  let b:syntastic_checkers = ['jshint']
-endif
-
-
-let g:test#javascript#intern#file_pattern = '\vtest_.*\.jsx?$'
+let b:ale_fixers = ['prettier', 'eslint']
