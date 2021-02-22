@@ -45,3 +45,7 @@ vim +PlugInstall +qall
 echo "Updateing local-config"
 rm -rf ${bundle_path}/local-config
 ln -s ${current_dir}/local-config ${bundle_path}/local-config
+
+echo "Copy init file for neo-vim"
+mkdir -p ~/.config/nvim/
+cp ${current_dir}/nvim-init.vim ~/.config/nvim/init.vim
