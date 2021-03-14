@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# colorscheme for tig
+# https://raw.githubusercontent.com/cbertoldi/dotfiles/master/tigrc.symlink
+
 echo "Preparing vim environment"
 
 current=$(cd $(dirname $0) && pwd)
