@@ -193,9 +193,6 @@ set autochdir
 " highlight DiffDelete ctermfg=black ctermbg=yellow
 " highlight DiffAdd ctermfg=black ctermbg=white
 
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_ignore_files = ['\m/node_modules/']
-
 let g:ctrlp_map = '<c-p>'
 " let g:ctrlp_match_window_bottom = 0
 " let g:ctrlp_match_window_reversed = 0
@@ -212,3 +209,6 @@ nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
+
+let g:ale_javascript_prettier_use_local_config = 1
+lua require("nvim-tree").setup()

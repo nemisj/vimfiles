@@ -5,3 +5,6 @@ let b:tslint_bin = findfile('node_modules/.bin/tslint', b:current_place . ';')
 if b:tslint_bin != ''
   let b:syntastic_typescript_tslint_exec = fnamemodify(b:tslint_bin, ':p')
 endif
+set tabstop=2
+set shiftwidth=2
+set expandtab
