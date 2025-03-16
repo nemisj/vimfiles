@@ -4,7 +4,7 @@
 
 * .vimrc
 * Customization for filetypes
-* Script for installing pathogen
+* Script for installing vim-plug
 * Script for quick installing of the most used pathogen bundles ( vimscripts ):
   (see `_include` file )
 
